@@ -1,22 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Profile from './Component/Profile/Profile'
 function App() {
+  const onClick =e=>{
+    e.preventDefault();
+    alert('Hi Nouhaila this an alert message ^^');
+    }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Profile FullName="Nouhaila EL ARROUM" bio="I like to enjoy everything in my life." profession=" web developer" onClick={onClick}><img src="./imageInPublic.jpg" /></Profile>
+        
       </header>
     </div>
   );
